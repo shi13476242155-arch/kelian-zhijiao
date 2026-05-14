@@ -1,0 +1,58 @@
+{
+  "id": "sample-data-thinking-001",
+  "title": "用流程图表达生活中的算法",
+  "grade": "七年级",
+  "duration": "1课时",
+  "subject": "初中信息科技",
+  "positioning": "帮助教师把课标要求、核心素养、学情差异和课堂活动组织成可编辑、可评价、可导出的资源包。",
+  "learningSituation": "学生熟悉生活流程，但对算法的确定性、顺序结构和流程图表达还缺少系统认识。",
+  "objectives": [
+    "能用自然语言描述生活任务中的关键步骤。",
+    "能用流程图表达顺序结构。",
+    "能根据同伴反馈优化流程表达的准确性。"
+  ],
+  "activities": [
+    {
+      "id": "act-1",
+      "title": "情境导入：整理一次校园借书流程",
+      "durationMinutes": 8,
+      "teacherPrompt": "引导学生说出借书流程中不可缺少的步骤，并追问顺序能否调整。",
+      "studentTask": "用三句话描述自己完成借书任务的过程。",
+      "evidence": "学生能够指出至少三个关键步骤，并说明顺序理由。",
+      "literacy": ["信息意识", "计算思维"]
+    },
+    {
+      "id": "act-2",
+      "title": "任务探究：把自然语言转换为流程图",
+      "durationMinutes": 22,
+      "teacherPrompt": "提供流程图符号支架，提醒学生关注开始、处理、判断和结束。",
+      "studentTask": "小组合作绘制借书流程图，并标注每一步的输入与输出。",
+      "evidence": "小组流程图结构完整，关键步骤顺序清晰。",
+      "literacy": ["计算思维", "数字化学习与创新"]
+    },
+    {
+      "id": "act-3",
+      "title": "展示评价：用证据改进流程图",
+      "durationMinutes": 10,
+      "teacherPrompt": "组织同伴互评，聚焦流程是否完整、表达是否准确、符号是否规范。",
+      "studentTask": "根据评价表修改流程图，并写出一条修改理由。",
+      "evidence": "学生能基于评价证据完成一次有效修改。",
+      "literacy": ["数字化学习与创新", "信息社会责任"]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "assess-1",
+      "dimension": "流程表达准确性",
+      "evidence": "流程图中的步骤、顺序和符号使用情况",
+      "levelDescriptions": ["步骤缺失较多", "步骤基本完整", "步骤完整且表达清晰"]
+    },
+    {
+      "id": "assess-2",
+      "dimension": "证据驱动改进",
+      "evidence": "学生根据同伴反馈修改作品的记录",
+      "levelDescriptions": ["修改理由不明确", "能根据建议完成修改", "能主动解释修改依据"]
+    }
+  ],
+  "exportFormats": ["JSON", "HTML", "Word"]
+}
