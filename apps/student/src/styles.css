@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  font-family:
+    Inter, "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui,
+    sans-serif;
+  background: transparent;
+}
+
+#root {
+  width: 400px;
+  max-width: 100vw;
+  height: 100%;
+  border-left: 1px solid #ebe7e2;
+  box-shadow: -8px 0 40px rgba(50, 42, 36, 0.06);
+  background: #ffffff;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}

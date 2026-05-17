@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "description": "课链智学——初中信息科技智能导学系统 V0",
+  "description": "课链智教——基于多智能体协同的初中信息科技AI备教学评一体化系统",
   "scripts": {
-    "dev": "concurrently -n web,server -c cyan,green \"npm run dev -w apps/web\" \"npm run dev -w apps/server\"",
-    "build": "npm run build -w packages/shared && npm run build -w apps/server && npm run build -w apps/web",
+    "dev": "concurrently -n web,student,server -c cyan,magenta,green \"npm run dev -w apps/web\" \"npm run dev -w apps/student\" \"npm run dev -w apps/server\"",
+    "build": "npm run build -w packages/shared && npm run build -w apps/server && npm run build -w apps/web && npm run build -w apps/student",
     "lint": "eslint . --ext .ts,.tsx --max-warnings=0"
   },
   "workspaces": [

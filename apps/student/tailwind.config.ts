@@ -5,6 +5,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        ink: "#17191c",
+        paper: "#f7f6f4",
         brand: {
           50: "#fff8f4",
           100: "#fbeee8",
@@ -21,21 +23,13 @@ const config: Config = {
         },
         workspace: {
           bg: "#f7f6f4",
-          card: "rgba(255,255,255,0.82)",
+          card: "#ffffff",
           border: "#ebe7e2",
-          text: "#17191c",
-          muted: "#6f706f",
-          subtle: "#9d9b98"
+          muted: "#6f706f"
         }
       },
-      borderRadius: {
-        DEFAULT: "12px",
-        lg: "12px",
-        xl: "16px"
-      },
       boxShadow: {
-        soft: "0 12px 34px rgba(50, 42, 36, 0.07)",
-        card: "0 18px 45px rgba(50, 42, 36, 0.08), 0 1px 0 rgba(255,255,255,0.8) inset"
+        soft: "0 18px 45px rgba(50, 42, 36, 0.08)"
       }
     }
   },

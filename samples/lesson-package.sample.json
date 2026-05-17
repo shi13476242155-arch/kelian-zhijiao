@@ -1,57 +1,52 @@
 {
-  "id": "sample-data-thinking-001",
-  "title": "用流程图表达生活中的算法",
+  "id": "sample-network-package-001",
+  "title": "数据分包灵活传",
   "grade": "七年级",
+  "module": "互联网应用与创新",
   "duration": "1课时",
   "subject": "初中信息科技",
-  "positioning": "帮助教师把课标要求、核心素养、学情差异和课堂活动组织成可编辑、可评价、可导出的资源包。",
-  "learningSituation": "学生熟悉生活流程，但对算法的确定性、顺序结构和流程图表达还缺少系统认识。",
+  "positioning": "把数据传输原理转化为可上课、可修改、可导出的课堂资源包。",
+  "learningSituation": "学生熟悉上网和视频播放，但不了解数据是如何传输的。",
   "objectives": [
-    "能用自然语言描述生活任务中的关键步骤。",
-    "能用流程图表达顺序结构。",
-    "能根据同伴反馈优化流程表达的准确性。"
+    "能用生活类比解释数据分包传输的基本过程。",
+    "能描述数据拆分、编号、传输和重组的关系。",
+    "能讨论网络服务中的隐私保护问题。"
   ],
   "activities": [
     {
       "id": "act-1",
-      "title": "情境导入：整理一次校园借书流程",
+      "title": "生活类比：快递为什么要分包",
       "durationMinutes": 8,
-      "teacherPrompt": "引导学生说出借书流程中不可缺少的步骤，并追问顺序能否调整。",
-      "studentTask": "用三句话描述自己完成借书任务的过程。",
-      "evidence": "学生能够指出至少三个关键步骤，并说明顺序理由。",
+      "teacherPrompt": "用快递分包情境引导学生理解大文件为什么要拆分传输。",
+      "studentTask": "说出快递分包中需要编号和核对的原因。",
+      "evidence": "学生能说出拆分、编号和重组的基本关系。",
       "literacy": ["信息意识", "计算思维"]
     },
     {
       "id": "act-2",
-      "title": "任务探究：把自然语言转换为流程图",
+      "title": "过程建模：数据包如何到达",
       "durationMinutes": 22,
-      "teacherPrompt": "提供流程图符号支架，提醒学生关注开始、处理、判断和结束。",
-      "studentTask": "小组合作绘制借书流程图，并标注每一步的输入与输出。",
-      "evidence": "小组流程图结构完整，关键步骤顺序清晰。",
+      "teacherPrompt": "组织学生把数据包传输过程画成步骤图。",
+      "studentTask": "小组完成数据拆分、传输、重组过程图。",
+      "evidence": "过程图能体现数据包编号、到达顺序和重组结果。",
       "literacy": ["计算思维", "数字化学习与创新"]
     },
     {
       "id": "act-3",
-      "title": "展示评价：用证据改进流程图",
+      "title": "隐私讨论：网络服务怎样保护数据",
       "durationMinutes": 10,
-      "teacherPrompt": "组织同伴互评，聚焦流程是否完整、表达是否准确、符号是否规范。",
-      "studentTask": "根据评价表修改流程图，并写出一条修改理由。",
-      "evidence": "学生能基于评价证据完成一次有效修改。",
-      "literacy": ["数字化学习与创新", "信息社会责任"]
+      "teacherPrompt": "引导学生讨论网络服务中的数据安全和隐私保护。",
+      "studentTask": "写出一条使用网络服务时保护隐私的建议。",
+      "evidence": "学生能联系真实网络服务提出合理建议。",
+      "literacy": ["信息社会责任"]
     }
   ],
   "assessments": [
     {
       "id": "assess-1",
-      "dimension": "流程表达准确性",
-      "evidence": "流程图中的步骤、顺序和符号使用情况",
-      "levelDescriptions": ["步骤缺失较多", "步骤基本完整", "步骤完整且表达清晰"]
-    },
-    {
-      "id": "assess-2",
-      "dimension": "证据驱动改进",
-      "evidence": "学生根据同伴反馈修改作品的记录",
-      "levelDescriptions": ["修改理由不明确", "能根据建议完成修改", "能主动解释修改依据"]
+      "dimension": "原理解释",
+      "evidence": "学生对数据分包、编号、传输和重组的说明",
+      "levelDescriptions": ["需要提示", "基本说清", "能结合情境解释"]
     }
   ],
   "exportFormats": ["JSON", "HTML", "Word"]

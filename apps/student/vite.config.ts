@@ -1,18 +1,24 @@
 import react from "@vitejs/plugin-react";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
-import { fileURLToPath } from "node:url";
+import electron from "vite-plugin-electron";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: fileURLToPath(new URL(".", import.meta.url)),
-  plugins: [react()],
+  plugins: [
+    react(),
+    electron([
+      {
+        entry: "electron/main.ts"
+      }
+    ])
+  ],
   css: {
     postcss: {
       plugins: [tailwindcss(), autoprefixer()]
     }
   },
   server: {
-    port: 5173
+    port: 5174
   }
 });

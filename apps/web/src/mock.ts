@@ -17,7 +17,7 @@ export const workspacePages: WorkspacePage[] = [
   {
     id: "home",
     navLabel: "工作台首页",
-    title: "课链智学教师工作台",
+    title: "课链智教教师工作台",
     subtitle: "把一节信息科技课，整理成可上课、可修改、可导出的课堂资源包。"
   },
   {
@@ -33,16 +33,10 @@ export const workspacePages: WorkspacePage[] = [
     subtitle: "生成课堂资源包，修订教学内容，并确认最终可用的上课材料。"
   },
   {
-    id: "literacy",
-    navLabel: "素养证据链",
-    title: "素养证据链",
-    subtitle: "查看核心素养、教学目标、学习活动、任务证据、测评证据与评价方式之间的对应关系。"
-  },
-  {
-    id: "quality",
-    navLabel: "质量评估",
-    title: "质量评估",
-    subtitle: "从课标一致性、学情适配度、活动可操作性和资源完整度等方面检查资源质量。"
+    id: "resource-check",
+    navLabel: "资源检测",
+    title: "资源检测",
+    subtitle: "检查课堂资源的素养证据链、质量风险和导出准备情况。"
   },
   {
     id: "export",

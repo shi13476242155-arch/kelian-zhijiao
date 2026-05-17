@@ -9,6 +9,10 @@
 body {
   margin: 0;
   min-width: 320px;
+  background:
+    radial-gradient(circle at 52% 8%, rgba(183, 155, 215, 0.18), transparent 24rem),
+    radial-gradient(circle at 78% 96%, rgba(226, 160, 142, 0.16), transparent 26rem),
+    #f7f6f4;
   font-family:
     Inter, "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui,
     sans-serif;
@@ -16,4 +20,141 @@ body {
 
 button {
   font: inherit;
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-xl border border-[#ebe7e2] bg-white/85 px-3 py-2.5 text-sm leading-6 text-[#17191c] outline-none transition placeholder:text-[#aaa49f] focus:border-[#d9826b] focus:bg-white focus:ring-2 focus:ring-[#fbeee8];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#17191c] px-4 py-2.5 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(23,25,28,0.16)] transition hover:bg-[#2a2a2d] hover:shadow-[0_16px_30px_rgba(23,25,28,0.18)] active:bg-[#0f1012] disabled:cursor-not-allowed disabled:bg-[#c9c4be] disabled:shadow-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[#ebe7e2] bg-white/80 px-4 py-2.5 text-sm font-semibold text-[#4b4b4c] shadow-[0_8px_22px_rgba(50,42,36,0.05)] transition hover:border-[#e2d5cc] hover:bg-white hover:text-[#17191c] active:bg-[#f8f1ed] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .panel-card {
+    @apply rounded-2xl border border-[#ebe7e2] bg-white/85 shadow-[0_18px_45px_rgba(50,42,36,0.08)] backdrop-blur;
+  }
+
+  .soft-panel {
+    @apply rounded-2xl border border-[#ebe7e2] bg-[#fbfaf8]/80;
+  }
+
+  .status-chip {
+    @apply inline-flex items-center rounded-lg border border-[#f2d8cf] bg-[#fff8f4] px-2 py-1 text-xs font-medium text-[#bd6a56];
+  }
+
+  .document-surface {
+    @apply rounded-2xl border border-[#ebe7e2] bg-white/90 shadow-[0_18px_45px_rgba(50,42,36,0.08)];
+  }
+
+  /* ===== SaaS 设计体系 ===== */
+
+  /* 精致白卡片 */
+  .saas-card {
+    @apply rounded-2xl border border-[#ebe7e2] bg-white/85 p-5 shadow-[0_18px_45px_rgba(50,42,36,0.08)] backdrop-blur;
+  }
+
+  /* 卡片标题区 */
+  .saas-card-header {
+    @apply mb-4 flex items-center gap-2 border-b border-[#f0ebe6] pb-3 text-[15px] font-semibold tracking-[-0.005em] text-[#17191c];
+  }
+
+
+  /* 列表项：底部分割线 + hover 微高亮 */
+  .saas-list-item {
+    @apply flex items-start gap-3 border-b border-[#f5f5f6] px-1 py-3 text-sm leading-7 text-[#374151] transition last:border-b-0;
+  }
+  .saas-list-item:hover {
+    @apply rounded-lg bg-[#fff8f4];
+  }
+
+  /* 圆形彩色序号 */
+  .saas-list-num {
+    @apply mt-[5px] flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#fbeee8] text-[11px] font-semibold text-[#bd6a56];
+  }
+
+  /* ===== 精致教学流程表 ===== */
+
+  .saas-table-wrap {
+    @apply -mx-1 overflow-x-auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .saas-table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  /* 表头 */
+  .saas-table thead th {
+    @apply border-b-2 border-[#ebe7e2] bg-[#fbfaf8] px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.03em] text-[#77736e];
+  }
+  .saas-table thead th:first-child {
+    @apply rounded-tl-lg;
+  }
+  .saas-table thead th:last-child {
+    @apply rounded-tr-lg;
+  }
+
+  /* 数据单元格 */
+  .saas-table tbody td {
+    @apply border-b border-[#f0f1f3] px-4 py-3 align-top text-sm leading-6 text-[#374151];
+  }
+
+  /* 斑马纹 */
+  .saas-table tbody tr:nth-child(even) td {
+    @apply bg-[#fafbfc];
+  }
+
+  /* hover 高亮行 */
+  .saas-table tbody tr:hover td {
+    @apply bg-[#fff8f4];
+  }
+
+  /* 环节名列 */
+  .saas-table .cell-phase {
+    @apply text-[13px] font-semibold text-[#bd6a56] whitespace-nowrap;
+  }
+  .saas-table .cell-duration {
+    @apply mt-0.5 block text-[11px] font-normal text-[#9ca3af];
+  }
+
+  /* 可编辑单元格 */
+  .saas-table .cell-editable {
+    @apply w-full cursor-pointer rounded-[4px] px-1.5 py-1 text-left whitespace-pre-wrap transition;
+  }
+  .saas-table .cell-editable:hover {
+    @apply bg-[#fbeee8];
+  }
+
+  /* 编辑态 textarea */
+  .saas-table .cell-textarea {
+    @apply w-full min-h-24 resize-y rounded-[4px] border border-[#f2d8cf] bg-[#fff8f4] p-1.5 text-sm leading-6 text-[#17191c] outline-none;
+  }
+
+  /* ===== 可编辑文本（列表内用） ===== */
+
+  .saas-editable {
+    @apply w-full flex-1 whitespace-pre-wrap rounded-[4px] px-1 py-0.5 text-left text-sm leading-7 text-[#374151] transition;
+  }
+  .saas-editable:hover {
+    @apply bg-[#fff8f4];
+  }
+
+  /* 编辑态 textarea */
+  .saas-editable-textarea {
+    @apply w-full min-h-28 resize-y rounded-md border border-[#d9826b] bg-white p-3 text-sm leading-7 text-[#17191c] shadow-[0_0_0_3px_rgba(217,130,107,0.12)] outline-none;
+  }
+
+  /* ===== 导航呼吸感动画 ===== */
+  .nav-breathe {
+    animation: breathe 3.5s ease-in-out infinite;
+  }
+  @keyframes breathe {
+    0%, 100% { box-shadow: 0 10px 26px rgba(50,42,36,0.08); }
+    50%      { box-shadow: 0 10px 32px rgba(217,130,107,0.16); }
+  }
 }
