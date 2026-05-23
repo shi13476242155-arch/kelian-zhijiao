@@ -3632,8 +3632,8 @@ interface StudentData {
 
 function createClassAnalysis(items: StudentData[]) {
   const count = items.length;
-  const taskRate = Math.round(avg(items.map((item) => item.progress?.taskCompletionRate ?? 0)));
-  const assessmentRate = Math.round(avg(items.map((item) => item.progress?.assessmentCompletionRate ?? 0)));
+  const taskRate = Math.round(avg(items.map((item) => (item.progress?.taskCompletionRate ?? 0) * 100)));
+  const assessmentRate = Math.round(avg(items.map((item) => (item.progress?.assessmentCompletionRate ?? 0) * 100)));
   const weakPoint = assessmentRate < 70 ? "测评理解偏弱" : taskRate < 70 ? "任务完成偏弱" : "整体表现较稳定";
   const names = (list: StudentData[]) => list.map((item, index) => item.studentInfo?.studentName || `学生${index + 1}`);
   const taskWeakness = Math.max(0, 100 - taskRate);
@@ -3658,12 +3658,12 @@ function createClassAnalysis(items: StudentData[]) {
       { name: "信息社会责任", comment: "建议在反思中继续加入安全、隐私和规范使用表达。" }
     ],
     groups: {
-      strong: names(items.filter((item) => (item.progress?.taskCompletionRate ?? 0) >= 80 && (item.progress?.assessmentCompletionRate ?? 0) >= 80)),
-      support: names(items.filter((item) => (item.progress?.taskCompletionRate ?? 0) < 60 || (item.progress?.assessmentCompletionRate ?? 0) < 60)),
+      strong: names(items.filter((item) => (item.progress?.taskCompletionRate ?? 0) >= 0.8 && (item.progress?.assessmentCompletionRate ?? 0) >= 0.8)),
+      support: names(items.filter((item) => (item.progress?.taskCompletionRate ?? 0) < 0.6 || (item.progress?.assessmentCompletionRate ?? 0) < 0.6)),
       watch: names(items.filter((item) => {
         const task = item.progress?.taskCompletionRate ?? 0;
         const assessment = item.progress?.assessmentCompletionRate ?? 0;
-        return task >= 60 && assessment >= 60 && (task < 80 || assessment < 80);
+        return task >= 0.6 && assessment >= 0.6 && (task < 0.8 || assessment < 0.8);
       }))
     },
     issueBars: [

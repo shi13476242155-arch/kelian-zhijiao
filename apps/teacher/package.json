@@ -1,0 +1,57 @@
+{
+  "name": "@kelian-zhixue/web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "description": "课链智教教师端 — AI备课 · 教学设计 · 学情分析",
+  "author": "课链智学",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts,.tsx",
+    "electron:dev": "vite",
+    "electron:build": "vite build && electron-builder"
+  },
+  "build": {
+    "appId": "com.kelian-zhixue.teacher",
+    "productName": "课链智教教师工作台",
+    "directories": {
+      "output": "dist-app"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "artifactName": "课链智教教师工作台-${version}.exe"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "dependencies": {
+    "@kelian-zhixue/shared": "0.0.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "docx": "^9.6.1",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.4.10"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "electron": "42.1.0",
+    "electron-builder": "^26.8.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite-plugin-electron": "^0.29.1"
+  }
+}

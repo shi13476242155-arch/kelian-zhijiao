@@ -4,24 +4,25 @@ import { fileURLToPath } from "node:url";
 
 let mainWindow: BrowserWindow | null = null;
 
-// dist directory relative to this file (dist-electron/main.js)
 const distDir = join(dirname(fileURLToPath(import.meta.url)), "../dist");
 
 function createWindow() {
   const primaryDisplay = screen.getPrimaryDisplay();
   const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
-  const windowWidth = 400;
-  const windowHeight = Math.round(screenHeight * 0.92);
+  const windowWidth = Math.min(1280, Math.round(screenWidth * 0.85));
+  const windowHeight = Math.min(800, Math.round(screenHeight * 0.85));
 
   mainWindow = new BrowserWindow({
     width: windowWidth,
     height: windowHeight,
-    x: screenWidth - windowWidth,
+    x: Math.round((screenWidth - windowWidth) / 2),
     y: Math.round((screenHeight - windowHeight) / 2),
+    minWidth: 960,
+    minHeight: 600,
     resizable: true,
     frame: true,
     titleBarStyle: "default",
-    title: "课链智教学生端",
+    title: "课链智教教师工作台",
     backgroundColor: "#ffffff",
     webPreferences: {
       nodeIntegration: false,

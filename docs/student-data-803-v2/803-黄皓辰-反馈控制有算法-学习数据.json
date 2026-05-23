@@ -1,0 +1,132 @@
+{
+  "id": "student-data-1779081629082",
+  "exportedAt": "2026-05-18T15:38:47.487Z",
+  "studentInfo": {
+    "className": "803",
+    "studentName": "黄皓辰",
+    "studentNumber": "9"
+  },
+  "lesson": {
+    "title": "反馈控制有算法",
+    "grade": "八年级",
+    "module": "物联网实践与探索"
+  },
+  "startedAt": "2026-05-18T15:05:47.487Z",
+  "finishedAt": "2026-05-18T15:38:47.487Z",
+  "taskResponses": [
+    {
+      "id": "task-0",
+      "prompt": "任务一（7分钟）：小组讨论并画出恒温系统的工作流程图，标注传感器、控制器、执行器。",
+      "response": "理解了传感器、控制器、执行器的配合关系"
+    },
+    {
+      "id": "task-1",
+      "prompt": "任务二（10分钟）：观看模拟视频，填写任务单中传感器、控制器、执行器的作用表格。",
+      "response": "传感器检测温度，控制器比较判断，执行器调节"
+    },
+    {
+      "id": "task-2",
+      "prompt": "任务三（10分钟）：根据教师示例，用if-then语句写出控制器决策的伪代码。",
+      "response": "if 实际>设定 then 启动制冷"
+    },
+    {
+      "id": "task-3",
+      "prompt": "任务四（3分钟）：迁移设计自动浇花系统的流程图和伪代码。",
+      "response": "if 湿度低 then 浇水 else 不浇"
+    },
+    {
+      "id": "task-4",
+      "prompt": "反思：在没有传感器的系统中，反馈控制能实现吗？为什么？",
+      "response": "不能实现，无法获取当前状态"
+    },
+    {
+      "id": "task-5",
+      "prompt": "反思：如果温度传感器坏了，恒温系统会发生什么？如何避免？",
+      "response": "系统会出错，建议加温度保险丝"
+    },
+    {
+      "id": "task-6",
+      "prompt": "反思：反馈控制算法在安全方面可能有什么风险？如何改进？",
+      "response": "用户隐私可能泄露，要脱敏处理"
+    }
+  ],
+  "assessmentResponses": [
+    {
+      "id": "choice-0",
+      "type": "单选题",
+      "prompt": "单选题1：在反馈控制系统中，负责检测当前状态的部件是？\nA. 传感器\nB. 控制器\nC. 执行器\nD. 显示器\n参考答案：A",
+      "response": "A",
+      "studentAnswer": "A",
+      "correctAnswer": "A"
+    },
+    {
+      "id": "choice-1",
+      "type": "单选题",
+      "prompt": "单选题2：自动恒温空调设定26℃，当室温降至24℃时，空调会启动加热，这体现了反馈控制系统的什么特点？\nA. 开环控制\nB. 闭环控制\nC. 手动控制\nD. 定时控制\n参考答案：B",
+      "response": "B",
+      "studentAnswer": "B",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "judge-0",
+      "type": "判断题",
+      "prompt": "判断题1：反馈控制系统中，控制器根据传感器采集的数据与设定值比较后做出决策。\n参考答案：对",
+      "response": "对",
+      "studentAnswer": "对",
+      "correctAnswer": "对"
+    },
+    {
+      "id": "judge-1",
+      "type": "判断题",
+      "prompt": "判断题2：如果反馈控制系统的传感器发生故障，系统仍能正常工作，不会影响控制效果。\n参考答案：错",
+      "response": "错",
+      "studentAnswer": "错",
+      "correctAnswer": "错"
+    },
+    {
+      "id": "short-0",
+      "type": "简答题",
+      "prompt": "简答题1：小明设计一个自动浇花系统：当土壤湿度低于30%时，启动水泵浇水5秒；否则关闭水泵。请写出该系统的控制器决策伪代码。\n评分要点：正确使用if-then结构；条件为湿度<30%；动作为启动水泵；else关闭水泵。",
+      "response": "if 湿度<30% 浇水 else 不浇"
+    },
+    {
+      "id": "short-1",
+      "type": "简答题",
+      "prompt": "简答题2：某智能路灯在傍晚光线暗时自动亮起，清晨光线亮时自动关闭。请分析该反馈控制系统的传感器、控制器和执行器分别是什么？并说明其工作过程。\n评分要点：传感器为光敏电阻或光线传感器；控制器为微电脑或控制电路；执行器为灯泡或开关；工作过程：检测光线→比较阈值→控制灯泡亮灭。",
+      "response": "光敏电阻、控制器、灯泡，检测→比较→执行"
+    },
+    {
+      "id": "analysis-0",
+      "type": "分析题（选做）",
+      "prompt": "分析题1（选做）：反馈控制算法广泛应用于自动驾驶汽车的巡航控制，但若传感器数据误判（如将静止物体误判为障碍物）可能引发事故。请结合信息社会责任，讨论如何减少此类安全风险，并提出至少两条具体措施。\n评价维度：能识别数据误判的风险；提出合理措施（如冗余传感器、多源数据融合、安全校验算法）；具有信息社会责任意识。",
+      "response": "加强安全措施"
+    }
+  ],
+  "assistantMessages": [
+    {
+      "role": "assistant",
+      "content": "已载入《反馈控制有算法》。你可以先阅读任务单，遇到困难时来问我。",
+      "time": "2026-05-18T05:15:28.992Z"
+    },
+    {
+      "role": "student",
+      "content": "能再解释一下控制器吗",
+      "time": "2026-05-18T05:20:26.847Z"
+    },
+    {
+      "role": "assistant",
+      "content": "建议你先回到任务单，找到和这个问题最接近的一条学习支架，再用自己的话写出理解。我可以继续帮你把思路拆小。",
+      "time": "2026-05-18T05:20:27.040Z"
+    }
+  ],
+  "progress": {
+    "taskCompletionRate": 1,
+    "assessmentCompletionRate": 1
+  },
+  "diagnosisSignals": {
+    "conceptUnderstanding": "掌握扎实",
+    "processExpression": "表达较完整",
+    "transferAbility": "有迁移表达",
+    "responsibilityAwareness": "较好"
+  }
+}
